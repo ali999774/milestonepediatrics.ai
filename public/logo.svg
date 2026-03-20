@@ -1,0 +1,9 @@
+<svg width="250" height="32" viewBox="0 0 250 32" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 26 L12 6 L20 6 L24 26 Z" fill="none" stroke="#0a7560" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="16" cy="14" r="3" fill="#0a7560"/>
+  <text x="36" y="23" font-family="Inter, -apple-system, sans-serif" font-variant="tabular-nums">
+    <tspan fill="#0a7560" font-weight="700" font-size="20" letter-spacing="0.5">Milestone</tspan>
+    <tspan fill="#0a7560" font-weight="500" font-size="20"> Pediatrics</tspan>
+    <tspan fill="#0a7560" font-weight="600" font-size="14" opacity="0.65">.ai</tspan>
+  </text>
+</svg>
