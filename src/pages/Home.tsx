@@ -199,7 +199,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link to="/about" id="hero-cta-secondary">
-              <Button variant="ghost" size="lg" className="min-w-[200px]">
+              <Button variant="secondary" size="lg" className="min-w-[200px]">
                 Meet Your Doctor →
               </Button>
             </Link>

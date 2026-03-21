@@ -80,17 +80,11 @@ export default function About() {
 
             {/* Headshot placeholder — 200px minimum */}
             <div className="flex-shrink-0">
-              <div
-                className="w-[200px] h-[200px] md:w-[240px] md:h-[240px] rounded-full bg-neutral-200 flex items-center justify-center"
-                role="img"
-                aria-label="Physician headshot — photo coming soon"
-              >
-                {/* PLACEHOLDER: Dr. Ali — Replace this div with an <img> tag once your professional headshot is ready */}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 text-neutral-400" aria-hidden="true">
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
-              </div>
+              <img
+                src="/dr-ali.jpg"
+                alt="Dr. Ali Naqvi — Milestone Pediatrics"
+                className="w-[200px] h-[200px] md:w-[240px] md:h-[240px] rounded-full object-cover min-w-[200px]"
+              />
             </div>
 
             {/* Bio + Credentials */}
