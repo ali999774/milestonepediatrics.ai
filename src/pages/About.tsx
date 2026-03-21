@@ -81,7 +81,7 @@ export default function About() {
             {/* Headshot placeholder — 200px minimum */}
             <div className="flex-shrink-0">
               <img
-                src="/dr-ali-photo.jpg"
+                src="/Naqvi-Ali.jpg"
                 alt="Dr. Ali Naqvi — Milestone Pediatrics"
                 className="w-[200px] h-[200px] md:w-[240px] md:h-[240px] rounded-full object-cover min-w-[200px]"
               />
