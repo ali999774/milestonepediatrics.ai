@@ -63,6 +63,7 @@ export const Nav: React.FC<NavProps> = () => {
           {/* Mobile menu button */}
           <div className="flex md:hidden items-center">
             <button
+              type="button"
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-neutral-600 hover:text-primary hover:bg-neutral-100 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-neutral-800 focus:outline-none"
               aria-expanded={isMobileMenuOpen}
@@ -90,6 +91,7 @@ export const Nav: React.FC<NavProps> = () => {
           <div className="flex justify-between items-center px-4 sm:px-6 h-20 border-b border-neutral-100 dark:border-neutral-800">
             <span className="font-bold text-xl tracking-tight text-primary">Milestone Pediatrics</span>
             <button
+              type="button"
               onClick={toggleMenu}
               tabIndex={isMobileMenuOpen ? 0 : -1}
               className="inline-flex items-center justify-center p-2 rounded-md text-neutral-600 hover:text-primary hover:bg-neutral-100 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
