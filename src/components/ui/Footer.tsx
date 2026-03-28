@@ -25,10 +25,17 @@ export const Footer: React.FC<FooterProps> = () => {
             </p>
             <div
               className="mt-4 opacity-70 hover:opacity-100 transition-opacity"
-              dangerouslySetInnerHTML={{
-                __html: `<iframe height="94" width="100" src="https://www.mycertifiedpediatrician.org/widgets/pediatrician" style="height: 94px; width: 100px; border: none; padding: 5px 5px 0 5px; border-radius: 5px;"></iframe>`
+              style={{ 
+                background: 'transparent', 
+                display: 'inline-block',
+                mixBlendMode: 'multiply',
+                colorScheme: 'light'
               }}
-            />
+            >
+              <div dangerouslySetInnerHTML={{
+                __html: `<iframe height="94" width="100" src="https://www.mycertifiedpediatrician.org/widgets/pediatrician" style="height: 94px; width: 100px; border: none; padding: 5px 5px 0 5px; border-radius: 5px; background: transparent;" allowtransparency="true"></iframe>`
+              }} />
+            </div>
           </div>
 
           {/* Links Col */}

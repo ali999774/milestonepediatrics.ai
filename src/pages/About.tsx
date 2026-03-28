@@ -100,10 +100,17 @@ export default function About() {
 
               <div
                 className="mt-4 mb-6 flex justify-center md:justify-start"
-                dangerouslySetInnerHTML={{
-                  __html: `<iframe height="94" width="100" src="https://www.mycertifiedpediatrician.org/widgets/pediatrician" style="height: 94px; width: 100px; border: none; padding: 5px 5px 0 5px; border-radius: 5px;"></iframe>`
+                style={{ 
+                  background: 'transparent', 
+                  display: 'inline-block',
+                  mixBlendMode: 'multiply',
+                  colorScheme: 'light'
                 }}
-              />
+              >
+                <div dangerouslySetInnerHTML={{
+                  __html: `<iframe height="94" width="100" src="https://www.mycertifiedpediatrician.org/widgets/pediatrician" style="height: 94px; width: 100px; border: none; padding: 5px 5px 0 5px; border-radius: 5px; background: transparent;" allowtransparency="true"></iframe>`
+                }} />
+              </div>
 
               {/* PLACEHOLDER: Dr. Ali — Replace "Dr. Ali" with your full professional name (e.g., "Dr. Firstname Lastname, MD, FAAP") */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 leading-tight tracking-tight mb-4">
