@@ -23,6 +23,12 @@ export const Footer: React.FC<FooterProps> = () => {
             <p className="text-neutral-600 dark:text-neutral-400 max-w-sm">
               Modern pediatric care for modern families. Warm, trustworthy, and forward-thinking.
             </p>
+            <div
+              className="mt-4 opacity-70 hover:opacity-100 transition-opacity"
+              dangerouslySetInnerHTML={{
+                __html: `<iframe height="94" width="100" src="https://www.mycertifiedpediatrician.org/widgets/pediatrician" style="height: 94px; width: 100px; border: none; padding: 5px 5px 0 5px; border-radius: 5px;"></iframe>`
+              }}
+            />
           </div>
 
           {/* Links Col */}
