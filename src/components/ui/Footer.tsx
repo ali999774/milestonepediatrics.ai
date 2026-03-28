@@ -23,18 +23,19 @@ export const Footer: React.FC<FooterProps> = () => {
             <p className="text-neutral-600 dark:text-neutral-400 max-w-sm">
               Modern pediatric care for modern families. Warm, trustworthy, and forward-thinking.
             </p>
-            <div
-              className="mt-4 opacity-70 hover:opacity-100 transition-opacity"
-              style={{ 
-                background: 'transparent', 
-                display: 'inline-block',
-                mixBlendMode: 'multiply',
-                colorScheme: 'light'
-              }}
-            >
-              <div dangerouslySetInnerHTML={{
-                __html: `<iframe height="94" width="100" src="https://www.mycertifiedpediatrician.org/widgets/pediatrician" style="height: 94px; width: 100px; border: none; padding: 5px 5px 0 5px; border-radius: 5px; background: transparent;" allowtransparency="true"></iframe>`
-              }} />
+            <div className="mt-8 mb-4 opacity-80 hover:opacity-100 transition-opacity flex md:justify-start">
+              <a 
+                href="https://www.mycertifiedpediatrician.org/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Verify certification at American Board of Pediatrics"
+              >
+                <img 
+                  src="/abp-logo-dark.svg" 
+                  alt="American Board of Pediatrics Certified" 
+                  className="h-10 w-auto object-contain"
+                />
+              </a>
             </div>
           </div>
 

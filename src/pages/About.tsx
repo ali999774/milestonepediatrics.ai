@@ -98,18 +98,20 @@ export default function About() {
                 ))}
               </div>
 
-              <div
-                className="mt-4 mb-6 flex justify-center md:justify-start"
-                style={{ 
-                  background: 'transparent', 
-                  display: 'inline-block',
-                  mixBlendMode: 'multiply',
-                  colorScheme: 'light'
-                }}
-              >
-                <div dangerouslySetInnerHTML={{
-                  __html: `<iframe height="94" width="100" src="https://www.mycertifiedpediatrician.org/widgets/pediatrician" style="height: 94px; width: 100px; border: none; padding: 5px 5px 0 5px; border-radius: 5px; background: transparent;" allowtransparency="true"></iframe>`
-                }} />
+              <div className="mt-4 mb-6 flex justify-center md:justify-start">
+                <a 
+                  href="https://www.mycertifiedpediatrician.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity"
+                  title="Verify certification at American Board of Pediatrics"
+                >
+                  <img 
+                    src="/abp-logo-dark.svg" 
+                    alt="American Board of Pediatrics Certified" 
+                    className="h-12 md:h-14 w-auto object-contain"
+                  />
+                </a>
               </div>
 
               {/* PLACEHOLDER: Dr. Ali — Replace "Dr. Ali" with your full professional name (e.g., "Dr. Firstname Lastname, MD, FAAP") */}
