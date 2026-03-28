@@ -206,7 +206,7 @@ export default function Home() {
           </div>
 
           {/* Subtle reassurance text */}
-          <p className="mt-5 text-sm text-neutral-400">
+          <p className="mt-5 text-sm text-neutral-500">
             No commitment required. We'll reach out to confirm your spot.
           </p>
         </div>
@@ -290,7 +290,7 @@ export default function Home() {
               Reserve My Child's Spot
             </Button>
           </Link>
-          <p className="mt-4 text-sm text-neutral-400">Takes less than 2 minutes.</p>
+          <p className="mt-4 text-sm text-neutral-500">Takes less than 2 minutes.</p>
         </div>
       </SectionWrapper>
 
