@@ -107,7 +107,7 @@ export default function About() {
                 <img 
                   src="/abp-certified.png" 
                   alt="American Board of Pediatrics — I Am Certified" 
-                  className="h-28 w-auto"
+                  className="h-32 w-auto"
                 />
               </a>
 
