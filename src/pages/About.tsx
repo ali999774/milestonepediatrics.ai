@@ -98,12 +98,18 @@ export default function About() {
                 ))}
               </div>
 
-              <iframe 
-                height="94" 
-                width="100" 
-                src="https://www.mycertifiedpediatrician.org/widgets/pediatrician" 
-                style={{ height: '94px', width: '100px', border: 'none', padding: '5px 5px 0 5px', borderRadius: '5px' }}
-              ></iframe>
+              <a 
+                href="https://www.mycertifiedpediatrician.org/verify" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Verify ABP board certification"
+              >
+                <img 
+                  src="/abp-certified.png" 
+                  alt="American Board of Pediatrics — I Am Certified" 
+                  className="h-24 w-auto"
+                />
+              </a>
 
               {/* PLACEHOLDER: Dr. Ali — Replace "Dr. Ali" with your full professional name (e.g., "Dr. Firstname Lastname, MD, FAAP") */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 leading-tight tracking-tight mb-4">
