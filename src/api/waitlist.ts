@@ -10,7 +10,11 @@ export type WaitlistResult<T = undefined> =
   | { success: false; error: string }
 
 // -------------------------------------------------------
-// Validation helpers (kept simple — no PHI stored)
+// Validation helpers.
+// NOTE: this form collects PHI (child name, DOB, insurance). Writes go
+// through SECURITY DEFINER RPCs, never a direct table call — the table
+// is closed to the anon/authenticated API roles. These client checks are
+// for UX only; the RPCs re-validate authoritatively server-side.
 // -------------------------------------------------------
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -45,9 +49,9 @@ function validateStep2(
 }
 
 // -------------------------------------------------------
-// Step 1 — Upsert on parent_email
-// Duplicate emails UPDATE the existing row, never error.
-// Returns the record UUID for Step 2.
+// Step 1 — submit_waitlist RPC (creates or merges on parent_email
+// server-side). Returns the record UUID for Step 2. The table is not
+// directly writable by anon; the SECURITY DEFINER function does the merge.
 // -------------------------------------------------------
 
 export async function submitWaitlistStep1(
@@ -58,33 +62,28 @@ export async function submitWaitlistStep1(
     return { success: false, error: validationError }
   }
 
-  const payload = {
-    parent_name: sanitize(fields.parent_name),
-    parent_email: fields.parent_email.trim().toLowerCase(),
-    child_name: sanitize(fields.child_name),
-    step_completed: 1 as const,
-  }
+  const { data, error } = await supabase.rpc('submit_waitlist', {
+    p_parent_name: fields.parent_name,
+    p_parent_email: fields.parent_email,
+    p_child_name: fields.child_name,
+  })
 
-  const { data, error } = await supabase
-    .from('waitlist')
-    .upsert(payload, { onConflict: 'parent_email' })
-    .select('id')
-    .single()
-
-  if (error) {
-    console.error('[waitlist] step1 error:', error.message)
+  if (error || !data) {
+    console.error('[waitlist] step1 error:', error?.message)
     return {
       success: false,
       error: 'Something went wrong. Please try again in a moment.',
     }
   }
 
-  return { success: true, data: { id: data.id } }
+  return { success: true, data: { id: data as string } }
 }
 
 // -------------------------------------------------------
-// Step 2 — Update by UUID, set step_completed = 2
-// All fields optional (user can "Skip" step 2).
+// Step 2 — update_waitlist_details RPC (enriches by UUID, sets
+// step_completed = 2 server-side). All fields optional (user can "Skip").
+// The UUID from Step 1 is the capability token; the table is not directly
+// updatable by anon.
 // -------------------------------------------------------
 
 export async function submitWaitlistStep2(
@@ -100,20 +99,13 @@ export async function submitWaitlistStep2(
     return { success: false, error: validationError }
   }
 
-  const payload: WaitlistStep2Update = {
-    step_completed: 2,
-    ...(fields.child_dob != null && { child_dob: fields.child_dob }),
-    ...(fields.phone != null && { phone: sanitize(fields.phone) }),
-    ...(fields.insurance != null && { insurance: sanitize(fields.insurance) }),
-    ...(fields.referral_source != null && {
-      referral_source: sanitize(fields.referral_source),
-    }),
-  }
-
-  const { error } = await supabase
-    .from('waitlist')
-    .update(payload)
-    .eq('id', id)
+  const { error } = await supabase.rpc('update_waitlist_details', {
+    p_id: id,
+    p_child_dob: fields.child_dob ?? null,
+    p_phone: fields.phone ?? null,
+    p_insurance: fields.insurance ?? null,
+    p_referral_source: fields.referral_source ?? null,
+  })
 
   if (error) {
     console.error('[waitlist] step2 error:', error.message)

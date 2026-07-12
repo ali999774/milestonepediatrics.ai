@@ -1,17 +1,28 @@
 -- ============================================================
--- Migration 001: Waitlist table + RLS policies
+-- Migration 001: Waitlist table + RLS
 -- Milestone Pediatrics — milestonepediatrics.ai
--- Author: Rachel Lin (Backend)
+--
+-- Security posture set by audit 2026-07-12 (supabase-security-audit):
+-- the table is closed to the REST API. All writes go through the
+-- SECURITY DEFINER RPCs in migration 003; staff read via the Supabase
+-- dashboard as the postgres role. There is deliberately no anon UPDATE
+-- policy and no blanket authenticated SELECT — both leaked PHI.
 -- ============================================================
 
--- Enable UUID generation
-create extension if not exists "pgcrypto";
+-- gen_random_uuid() is in the Postgres 17 core. pgcrypto is pinned to
+-- the dedicated `extensions` schema (never `public`) for any other
+-- crypto helpers, per audit finding H2.
+create extension if not exists "pgcrypto" with schema extensions;
 
 -- -----------------------------------------------------------
 -- Table: public.waitlist
--- Two-step waitlist intake. Step 1 collects minimal contact
--- info; Step 2 enriches the record with optional details.
--- NO clinical data or PHI is stored.
+-- Two-step waitlist intake for prospective patient families.
+--
+-- CONTAINS PHI. child_name, child_dob, and insurance tie an
+-- identifiable child to a pediatric practice; treat every row as
+-- patient-identifiable health information. (An earlier version of this
+-- migration wrongly labelled the table "No PHI" — that false claim was
+-- itself the liability and has been removed.)
 -- -----------------------------------------------------------
 create table if not exists public.waitlist (
   id              uuid primary key default gen_random_uuid(),
@@ -33,40 +44,25 @@ create table if not exists public.waitlist (
   created_at      timestamptz not null default now(),
   updated_at      timestamptz not null default now(),
 
-  -- Upsert key — duplicate emails update, never error
+  -- Merge key — the submit RPC upserts on this
   constraint waitlist_parent_email_unique unique (parent_email)
 );
 
 -- -----------------------------------------------------------
 -- Row-Level Security
+-- Enabled with NO policies for anon or authenticated: both API roles
+-- get zero row access (default deny). The intake RPCs (migration 003)
+-- run SECURITY DEFINER and bypass RLS; the postgres/dashboard role
+-- bypasses RLS for staff review. This is the correct closed posture for
+-- a PHI table with no in-app read surface.
 -- -----------------------------------------------------------
 alter table public.waitlist enable row level security;
-
--- 1. Public INSERT — anyone (anon) can submit a waitlist entry
-create policy "anon_insert_waitlist"
-  on public.waitlist
-  for insert
-  to anon
-  with check (true);
-
--- 2. Public UPDATE by ID — anon can update their own record
---    (frontend holds the UUID returned from Step 1)
-create policy "anon_update_waitlist_by_id"
-  on public.waitlist
-  for update
-  to anon
-  using (true)
-  with check (true);
-
--- 3. Authenticated SELECT — only logged-in admin can read rows
-create policy "auth_select_waitlist"
-  on public.waitlist
-  for select
-  to authenticated
-  using (true);
 
 -- -----------------------------------------------------------
 -- Comment on table
 -- -----------------------------------------------------------
 comment on table public.waitlist is
-  'Two-step waitlist intake for prospective patient families. No PHI.';
+  'Two-step waitlist intake for prospective patient families. CONTAINS PHI '
+  '(child name, DOB, insurance). REST API access is closed: writes go through '
+  'the submit_waitlist / update_waitlist_details SECURITY DEFINER RPCs; reads '
+  'happen only via the Supabase dashboard as postgres.';
