@@ -2,28 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://milestonepediatrics.ai/</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://milestonepediatrics.ai/about</loc>
-    <lastmod>2026-03-28</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://milestonepediatrics.ai/services</loc>
-    <lastmod>2026-03-28</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://milestonepediatrics.ai/contact</loc>
-    <lastmod>2026-03-28</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://milestonepediatrics.ai/privacy</loc>
-    <lastmod>2026-03-28</lastmod>
-    <priority>0.3</priority>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

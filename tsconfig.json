@@ -27,5 +27,15 @@
     }
   },
   "include": ["src"],
+  "exclude": [
+    "src/pages/About.tsx",
+    "src/pages/Services.tsx",
+    "src/pages/FAQ.tsx",
+    "src/pages/Contact.tsx",
+    "src/components/WaitlistForm.tsx",
+    "src/components/Accordion.tsx",
+    "src/api/waitlist.ts",
+    "src/lib/supabase.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
