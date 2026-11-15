@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createBrowserRouter, Navigate, type RouteObject } from 'react-router-dom';
 import RootLayout from '../layouts/RootLayout';
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -7,7 +7,12 @@ import FAQ from '../pages/FAQ';
 import Privacy from '../pages/Privacy';
 import NotFound from '../pages/NotFound';
 
-export const router = createBrowserRouter([
+/**
+ * Route table, shared by the browser (src/main.tsx) and the prerenderer
+ * (src/entry-server.tsx). It must stay free of browser-only side effects so it
+ * can be imported in Node. Create the router from it at the call site.
+ */
+export const routes: RouteObject[] = [
   {
     path: '/',
     element: <RootLayout />,
@@ -22,4 +27,6 @@ export const router = createBrowserRouter([
       { path: '*', element: <NotFound /> },
     ],
   },
-]);
+];
+
+export const createRouter = () => createBrowserRouter(routes);
