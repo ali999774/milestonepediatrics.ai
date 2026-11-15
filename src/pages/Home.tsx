@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { PAGE_META, SEO_CONFIG } from '../seo/meta';
+import { SiteJsonLd } from '../seo/jsonld';
 
 export default function Home() {
   const meta = PAGE_META.home;
@@ -19,6 +20,7 @@ export default function Home() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={`${SEO_CONFIG.baseUrl}${SEO_CONFIG.ogImage}`} />
       </Helmet>
+      <SiteJsonLd />
 
       <div className="relative overflow-hidden py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8">
         {/* Subtle decorative background gradient matching brand identity */}

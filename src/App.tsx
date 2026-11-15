@@ -1,5 +1,9 @@
 import { RouterProvider } from 'react-router-dom';
-import { router } from './router';
+import { createRouter } from './router';
+
+// Created once at module load in the browser. Never import this file from the
+// server entry: createBrowserRouter needs `window`.
+const router = createRouter();
 
 function App() {
   return <RouterProvider router={router} />

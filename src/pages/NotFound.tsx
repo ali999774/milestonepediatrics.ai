@@ -2,9 +2,16 @@ import { SectionWrapper } from '../components/ui/SectionWrapper';
 import { Button } from '../components/ui/Button';
 
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function NotFound() {
   return (
+    <>
+    <Helmet>
+      <title>Page not found | Milestone Pediatrics</title>
+      <meta name="description" content="The page you were looking for could not be found." />
+      <meta name="robots" content="noindex" />
+    </Helmet>
     <SectionWrapper className="py-24 text-center max-w-2xl mx-auto flex flex-col items-center justify-center min-h-[60vh]">
       <div className="text-neutral-300 font-bold text-6xl mb-4">404</div>
       <h1 className="text-3xl lg:text-4xl font-semibold mb-6 text-neutral-800">Page not found</h1>
@@ -15,5 +22,6 @@ export default function NotFound() {
         <Button>Return Home</Button>
       </Link>
     </SectionWrapper>
+    </>
   );
 }
