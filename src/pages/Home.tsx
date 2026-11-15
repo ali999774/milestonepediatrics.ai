@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { PAGE_META, SEO_CONFIG } from '../seo/meta';
 
@@ -59,19 +60,27 @@ export default function Home() {
 
           {/* Subtitle / Status Badge */}
           <div className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-primary-light text-primary tracking-wide mb-8">
-            In planning
+            Planned to open in 2027
           </div>
 
           {/* Content Card */}
           <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-card border border-neutral-200/80 dark:border-neutral-700/80 shadow-card p-6 sm:p-10 text-left sm:text-center space-y-4">
-            <p className="text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
-              Milestone Pediatrics is in the planning stage and is not open or accepting patients.
-              Appointments and waitlist registration are not available.
+            <p
+              role="note"
+              className="text-base sm:text-lg font-semibold text-neutral-800 dark:text-neutral-100 leading-relaxed"
+            >
+              Milestone Pediatrics is not yet open and is not accepting patients.
             </p>
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              The office location and opening date have not been finalized. Updates will be posted
-              here as plans develop.
+              A board-certified pediatrician with more than 10 years in practice, ECHO Autism trained, is planning a general pediatric practice in
+              Spring, TX (north Houston). Appointments and registration are not
+              available. The pages below describe what the practice is planning.
             </p>
+            <nav aria-label="About the planned practice" className="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-2 text-sm sm:text-base font-medium">
+              <Link to="/about" className="text-primary underline-offset-4 hover:underline">About the practice</Link>
+              <Link to="/services" className="text-primary underline-offset-4 hover:underline">Planned services</Link>
+              <Link to="/faq" className="text-primary underline-offset-4 hover:underline">FAQ</Link>
+            </nav>
           </div>
         </div>
       </div>
