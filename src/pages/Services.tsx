@@ -127,7 +127,7 @@ export default function Services() {
               {/* TODO(Ali): confirm the exact autism services and process to describe. */}
               <p className="text-neutral-600 text-base leading-relaxed">
                 The practice will offer developmental screening and autism spectrum disorder evaluation
-                and care. Dr. Naqvi is ECHO Autism trained.
+                and care. The physician is ECHO Autism trained.
               </p>
             </Card>
           </div>

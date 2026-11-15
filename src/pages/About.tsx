@@ -68,7 +68,7 @@ export default function About() {
       </Helmet>
 
       {/* ── HERO: PHYSICIAN INTRO + CREDENTIALS ────────────────────────────── */}
-      {/* TODO(Ali): headshot (public/Naqvi-Ali.jpg) and ABP badge were removed from the repo; re-add if you want them shown. */}
+      {/* TODO(Ali): headshot and ABP badge were removed from the repo; re-add if you want them shown. */}
       <SectionWrapper background="white" id="about-hero" className="!py-16 md:!py-24">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex flex-wrap gap-2 justify-center mb-6">
@@ -80,15 +80,15 @@ export default function About() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 leading-tight tracking-tight mb-4">
-            Meet <span className="text-primary">Dr. Ali Naqvi</span>
+            About the <span className="text-primary">practice</span>
           </h1>
 
           <p className="text-lg text-neutral-600 leading-relaxed mb-4">
-            Dr. Naqvi is a board-certified pediatrician with more than 10 years in practice. His clinical
-            focus includes newborn care, ADHD, and autism spectrum disorder, and he is ECHO Autism trained.
+            Milestone Pediatrics is led by a board-certified pediatrician with more than 10 years in practice,
+            ECHO Autism trained. The clinical focus includes newborn care, ADHD, and autism spectrum disorder.
           </p>
           <p className="text-base text-neutral-600 leading-relaxed mb-6">
-            He is planning Milestone Pediatrics, a general pediatric practice in Spring, TX (north Houston),
+            The physician is planning this general pediatric practice in Spring, TX (north Houston),
             planned to open in 2027. The practice is not yet open and is not accepting patients.
           </p>
           <Link to="/services">

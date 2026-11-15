@@ -1,5 +1,5 @@
 # STATE — Milestone Pediatrics Website
-Last updated: 2026-11-14 (Claude Sonnet 5.5 via Antigravity)
+Last updated: 2026-11-15 (Claude Sonnet 5.5 via Antigravity)
 
 ## Purpose
 Informational, pre-opening site at www.mymilestonepediatrics.com. No patient recruitment:
@@ -7,7 +7,7 @@ no waitlist, booking, forms, email or phone on routed pages. Planned to open 202
 
 ## Current
 - Routed: /, /about, /services, /faq, /privacy. /contact redirects to /.
-- PR open on branch feat/reopen-info-pages (not merged).
+- PR #2 (feat/reopen-info-pages) retargeted to main and merged. Physician is unnamed on routed pages and meta; /about H1 is "About the practice". Name held back until a later date (Ali's call).
 - Copy rules: location "Spring, TX (north Houston)"; no employer/UTHealth/McGovern; no named insurers.
 
 ## Open

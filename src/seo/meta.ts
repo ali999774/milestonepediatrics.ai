@@ -27,9 +27,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     canonical: 'https://www.mymilestonepediatrics.com/',
   },
   about: {
-    title: 'About Dr. Ali Naqvi | Milestone Pediatrics, Spring, TX',
+    title: 'About the practice | Milestone Pediatrics, Spring, TX',
     description:
-      'Meet Dr. Ali Naqvi, a board-certified pediatrician planning to open Milestone Pediatrics in Spring, TX in 2027. Not yet open or accepting patients.',
+      'Learn about Milestone Pediatrics, a practice led by a board-certified pediatrician with more than 10 years in practice, ECHO Autism trained, planning to open Milestone Pediatrics in Spring, TX in 2027. Not yet open or accepting patients.',
     canonical: 'https://www.mymilestonepediatrics.com/about',
   },
   services: {

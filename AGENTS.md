@@ -14,7 +14,7 @@ Milestone Pediatrics is a solo, insurance-based general pediatric practice plann
 - Repo: github.com/ali999774/milestonepediatrics.ai
 - GitHub Project Board: github.com/users/ali999774/projects/4
 - Email: none published (the .ai mailbox is being retired)
-- Physician: Dr. Ali Naqvi — board-certified General Pediatrician, 10+ years in practice. Do not name employers or affiliations on the site; do not call him faculty. Clinical focus: ADHD, autism spectrum disorder, newborn care, asthma. Conducts ECHO Autism evaluations for underserved communities.
+- Physician: not named on the site until a later date (do not use the name in routed pages, meta, alt text, JSON-LD, comments-as-content or hidden elements). Describe as "a board-certified pediatrician with more than 10 years in practice, ECHO Autism trained". Do not name employers or affiliations on the site; do not call him faculty. Clinical focus: ADHD, autism spectrum disorder, newborn care, asthma. Conducts ECHO Autism evaluations for underserved communities.
 
 ---
 

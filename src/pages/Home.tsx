@@ -72,12 +72,12 @@ export default function Home() {
               Milestone Pediatrics is not yet open and is not accepting patients.
             </p>
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              Dr. Ali Naqvi, a board-certified pediatrician, is planning a general pediatric practice in
+              A board-certified pediatrician with more than 10 years in practice, ECHO Autism trained, is planning a general pediatric practice in
               Spring, TX (north Houston). Appointments and registration are not
               available. The pages below describe what the practice is planning.
             </p>
             <nav aria-label="About the planned practice" className="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-2 text-sm sm:text-base font-medium">
-              <Link to="/about" className="text-primary underline-offset-4 hover:underline">About Dr. Naqvi</Link>
+              <Link to="/about" className="text-primary underline-offset-4 hover:underline">About the practice</Link>
               <Link to="/services" className="text-primary underline-offset-4 hover:underline">Planned services</Link>
               <Link to="/faq" className="text-primary underline-offset-4 hover:underline">FAQ</Link>
             </nav>

@@ -41,7 +41,7 @@ const additionalQuestions: AccordionItem[] = [
     id: 'faq-who',
     question: 'Who is the physician?',
     answer:
-      'Dr. Ali Naqvi is a board-certified pediatrician with more than 10 years in practice. He is ECHO Autism trained, and his clinical focus includes newborn care, ADHD, and autism spectrum disorder.',
+      'The practice is led by a board-certified pediatrician with more than 10 years in practice. The physician is ECHO Autism trained, and the clinical focus includes newborn care, ADHD, and autism spectrum disorder.',
   },
   {
     id: 'faq-ages',
