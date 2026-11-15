@@ -29,7 +29,7 @@ export const PAGE_META: Record<string, PageMeta> = {
   about: {
     title: 'About the practice | Milestone Pediatrics, Spring, TX',
     description:
-      'Learn about Milestone Pediatrics, a practice led by a board-certified pediatrician with more than 10 years in practice, ECHO Autism trained, planning to open Milestone Pediatrics in Spring, TX in 2027. Not yet open or accepting patients.',
+      'Learn about Milestone Pediatrics, a practice led by a board-certified pediatrician with more than 10 years in practice, ECHO Autism trained, planning to open in Spring, TX in 2027. Not yet open or accepting patients.',
     canonical: 'https://www.mymilestonepediatrics.com/about',
   },
   services: {
