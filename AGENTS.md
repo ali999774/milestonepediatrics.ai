@@ -1,20 +1,20 @@
 # AGENT.md — Milestone Pediatrics Website
 
-> Context file for AI agents working on milestonepediatrics.ai.
+> Context file for AI agents working on www.mymilestonepediatrics.com.
 > Load this at the start of any session involving this project.
 
 ---
 
 ## What This Project Is
 
-Milestone Pediatrics is a solo, insurance-based general pediatric practice opening in North Spring, Houston TX approximately September 2026. The website (milestonepediatrics.ai) is the pre-launch online presence — capturing waitlist signups, establishing credibility, and communicating the practice's identity before doors open.
+Milestone Pediatrics is a solo, insurance-based general pediatric practice planned to open in 2027 in Spring, TX (north Houston). The website (www.mymilestonepediatrics.com) is an informational, pre-opening site. It does NOT recruit patients: no waitlist, booking or forms, and it states the practice is not yet open and not accepting patients.
 
-- Domain: milestonepediatrics.ai (Namecheap)
+- Domain: www.mymilestonepediatrics.com
 - Hosting: Vercel
 - Repo: github.com/ali999774/milestonepediatrics.ai
 - GitHub Project Board: github.com/users/ali999774/projects/4
-- Email: hello@milestonepediatrics.ai
-- Physician: Dr. Ali Naqvi — board-certified General Pediatrician, academic faculty at McGovern Medical School / UTHealth Houston, affiliated with Memorial Hermann. Clinical focus: ADHD, autism spectrum disorder, newborn care, asthma. Conducts ECHO Autism evaluations for underserved communities.
+- Email: none published (the .ai mailbox is being retired)
+- Physician: Dr. Ali Naqvi — board-certified General Pediatrician, 10+ years in practice. Do not name employers or affiliations on the site; do not call him faculty. Clinical focus: ADHD, autism spectrum disorder, newborn care, asthma. Conducts ECHO Autism evaluations for underserved communities.
 
 ---
 
@@ -44,7 +44,7 @@ Milestone Pediatrics is a solo, insurance-based general pediatric practice openi
 | G — Deploy         | Elena Bosch                | 🟡 Queued      |
 | H — Retrospective  | —                          | ⬜ Not started |
 
-Site is live at milestonepediatrics.ai. All 6 pages load. Nav + footer present. Doctor photo on About. Insurance list populated. Waitlist form on Contact page.
+Informational site: /, /about, /services, /faq, /privacy render; /contact redirects to /. No waitlist form or CTAs on routed pages.
 
 ---
 
@@ -87,8 +87,8 @@ Site is live at milestonepediatrics.ai. All 6 pages load. Nav + footer present. 
 
 ## Key Decisions (locked — do not revisit without reason)
 
-- Domain staying on .ai — milestonepediatrics.com listed at $8K/year aftermarket, not worth it. .ai is coherent with brand identity.
-- Two-step waitlist form: Step 1 (3 fields) → Step 2 (optional detail)
+- Domain is www.mymilestonepediatrics.com (the .ai domain is retired).
+- Waitlist form retired (files kept, not routed). Do not re-add without Ali's decision.
 - Warm off-white surface — not pure #FFFFFF
 - No social links until accounts are active
 - No specific insurance plans until Dr. Ali confirms payer contracts
@@ -141,12 +141,10 @@ Exception — future Grok Voice Agent feature: If/when a voice agent is added fo
 |----------------------|-----------------------------------------------------|
 | Physician            | Dr. Ali Naqvi, MD                                   |
 | Specialty            | General Pediatrics                                  |
-| Location             | North Spring, Houston TX (address TBD)              |
-| Opening              | ~September 2026                                     |
+| Location             | Spring, TX (north Houston); no street/neighborhood  |
+| Opening              | Planned 2027 (no month)                             |
 | Model                | Solo, insurance-based                               |
 | Payer affiliation    | MHMD (for contracting leverage)                     |
-| Hospital affiliation | Memorial Hermann                                    |
-| Academic affiliation | McGovern Medical School / UTHealth Houston          |
 | Clinical focus       | ADHD, ASD, newborn care, asthma                     |
 | Special program      | ECHO Autism evaluations for underserved communities |
 | Age range            | Newborn – 18 years                                  |
@@ -157,7 +155,7 @@ Exception — future Grok Voice Agent feature: If/when a voice agent is added fo
 
 | Property         | URL                          | Purpose                                        |
 |------------------|------------------------------|------------------------------------------------|
-| Practice website | milestonepediatrics.ai       | Pre-launch presence, waitlist                  |
+| Practice website | mymilestonepediatrics.com    | Informational pre-opening site                 |
 | App              | Morning Momentum (App Store) | ADHD morning routine tool — credibility bridge |
 | Blog             | momentum-lab.ghost.io        | Pediatric content, SEO, trust building         |
 
