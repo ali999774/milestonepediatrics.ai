@@ -28,7 +28,7 @@ export default function Privacy() {
             <p className="font-semibold text-neutral-800 dark:text-neutral-200">
               Milestone Pediatrics (DBA of Uptown Pediatrics PLLC)
             </p>
-            <p>milestonepediatrics.ai</p>
+            <p>www.mymilestonepediatrics.com</p>
             <p>Last updated: October 2026</p>
           </div>
         </div>
