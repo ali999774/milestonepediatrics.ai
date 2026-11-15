@@ -4,7 +4,7 @@
  */
 
 export const SEO_CONFIG = {
-  baseUrl: 'https://milestonepediatrics.ai',
+  baseUrl: 'https://www.mymilestonepediatrics.com',
   defaultTitle: 'Milestone Pediatrics | In Planning',
   defaultDescription: 'Milestone Pediatrics is in the planning stage and is not open or accepting patients. Updates will be posted here as plans develop.',
   ogImage: '/og-image.png',
@@ -21,11 +21,11 @@ export const PAGE_META: Record<string, PageMeta> = {
   home: {
     title: 'Milestone Pediatrics | In Planning',
     description: 'Milestone Pediatrics is in the planning stage and is not open or accepting patients. Updates will be posted here as plans develop.',
-    canonical: 'https://milestonepediatrics.ai/',
+    canonical: 'https://www.mymilestonepediatrics.com/',
   },
   privacy: {
     title: 'Privacy Policy | Milestone Pediatrics',
     description: 'Privacy policy for Milestone Pediatrics.',
-    canonical: 'https://milestonepediatrics.ai/privacy',
+    canonical: 'https://www.mymilestonepediatrics.com/privacy',
   },
 };

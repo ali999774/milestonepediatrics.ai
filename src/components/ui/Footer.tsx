@@ -13,7 +13,6 @@ export const Footer: React.FC = () => {
           <div className="space-y-1.5">
             <div className="font-bold text-lg tracking-tight text-primary">
               Milestone Pediatrics
-              <span className="text-primary/60 font-semibold">.ai</span>
             </div>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
               Milestone Pediatrics is the DBA of Uptown Pediatrics PLLC.

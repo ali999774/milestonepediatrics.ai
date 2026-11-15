@@ -18,7 +18,6 @@ export const Nav: React.FC = () => {
               aria-label="Milestone Pediatrics Home"
             >
               Milestone Pediatrics
-              <span className="text-primary/60 font-semibold">.ai</span>
             </Link>
           </div>
 
