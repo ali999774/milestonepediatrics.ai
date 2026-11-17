@@ -29,7 +29,7 @@ export default function Privacy() {
               Milestone Pediatrics (DBA of Uptown Pediatrics PLLC)
             </p>
             <p>www.mymilestonepediatrics.com</p>
-            <p>Last updated: October 2026</p>
+            <p>Last updated: November 2026</p>
           </div>
         </div>
 
@@ -59,11 +59,19 @@ export default function Privacy() {
               provide any form for submitting personal or family information.
             </p>
             <p className="mt-3">
-              The website application code does not set tracking cookies, load advertising pixels, or
-              include client-side analytics scripts. When you visit this page, standard HTTP request
+              The website application code does not load advertising pixels or collect any
+              information you type. When you visit this page, standard HTTP request
               information (such as IP address, browser user-agent, and requested URL) may be
               processed by the hosting provider (Vercel) to deliver the site, and by Google when your
               browser loads stylesheet and font assets from Google Fonts.
+            </p>
+            <p className="mt-3">
+              This website (not any app) uses Google Analytics to count visits and see which pages
+              are read. It reports aggregate statistics such as page views, approximate location,
+              and browser type. We do not send names, email addresses, or anything you type to
+              Google Analytics, and we do not use it for advertising. Google Analytics sets cookies
+              in your browser to tell visits apart; you can block them in your browser settings or
+              with Google&apos;s opt-out add-on.
             </p>
           </section>
 
