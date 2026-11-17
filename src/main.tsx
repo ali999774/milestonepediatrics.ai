@@ -3,6 +3,7 @@ import { createRoot, hydrateRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.tsx'
 import './index.css'
+import { initAnalytics } from './lib/analytics'
 
 const container = document.getElementById('root')!
 
@@ -21,3 +22,5 @@ if (container.hasChildNodes()) {
 } else {
   createRoot(container).render(app)
 }
+
+initAnalytics()

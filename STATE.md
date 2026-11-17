@@ -1,5 +1,5 @@
 # STATE — Milestone Pediatrics Website
-Last updated: 2026-11-15 (Claude Sonnet 5.5 via Antigravity)
+Last updated: 2026-11-17 (Claude Sonnet 5.5 via Claude Code)
 
 ## Purpose
 Informational, pre-opening site at www.mymilestonepediatrics.com. No patient recruitment:
@@ -10,6 +10,7 @@ no waitlist, booking, forms, email or phone on routed pages. Planned to open 202
 - Physician is unnamed on routed pages, meta and built output (Ali's call; held back until a later date).
 - Copy rules: location "Spring, TX (north Houston)"; no employer/UTHealth/McGovern; no named insurers.
 - Branch feat/prerender (PR open against main, not merged): every public page is prerendered to static HTML.
+- Analytics: GA4 (src/lib/analytics.ts, called from main.tsx; ID lives only there). Production builds only; skips /contact, /waitlist, /intake, /forms, /portal, /login and any Capacitor shell. No custom events. Privacy page discloses it. PR on branch chore/ga4 (not merged).
 
 ## How the build works (prerender)
 `npm run build` = `tsc && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs`
